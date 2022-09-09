@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MP3QRF');
+	</script>
+	<!-- End Google Tag Manager -->
+    <title>Checkatrade </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=1" />	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:800,700,600,400" rel="stylesheet" type="text/css">
+	<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js" type="text/javascript"></script>
+	
+     <style type="text/css">
+		/* General */
+		* {margin:0; padding:0; font-size:100%; color:#333333; }
+		.left {float:left; width:48%; margin-right:4%;}
+		.right {float:right; width:48%;}
+		.clear {clear:both;}
+		.mobile-only, .mobile-only-inline {display:none;}
+		p, form {margin: 0;}
+		strong {font-weight:600;}
+		img {max-width:100%;}
+		a {color:#e31313;}
+		a img {border:0;}
+		
+		/* Main layout */
+		body {font-family:'Open Sans', Arial, Helvetica, sans-serif; font-size:18px; line-height:24px; color:#333333; background-color:#f8f7f5; }
+		body .wrapper {margin:0px auto; max-width:1028px; padding:0 24px;}
+		
+		/* Header */
+		#header {border-bottom:solid 2px #1a93cc; background-color:#fff;}
+		#header #logo {float:left; width:135px; height:56px;}
+		#header #phone {float:right;}
+		#header #phone #desktop {font-size:16px; line-height:18px; color:#333333; text-align:right; padding-top:10px;}
+		#header #phone #desktop a {font-size:16px; line-height:18px; color:#0066ff; font-weight:600; text-decoration:none;}
+		#header #phone #desktop #hours {font-size:12px; line-height:12px; color:#555555; padding-top:4px;}
+		#header #phone #mobile {display:none;}
+		
+		/* title */
+		#title { background:#F8F9FF;}
+		#title .wrapper {padding:48px 24px 32px 24px; text-align:left; max-width:480px; font-size:16px; line-height:24px; color:#333333;}
+		#title h1 { font-size:28px; line-height:36px; color:#00112C; font-weight:600; padding-bottom:16px}
+		#title ul {list-style:none; margin:0; padding:24px 0 0 0;} 
+		#title li {list-style-type:none; background:url('https://storage.pardot.com/796483/1652268078zbhj2mYq/check_large.png') no-repeat left 2px; background-size:21px 21px; padding:0px 0px 16px 32px;}
+
+		/* Content */
+		#content {background-color:#ffffff;}
+		#content .wrapper {padding:0px 10px 48px 10px; text-align:left; max-width:480px;}
+		#content p { font-size:18px; line-height:26px; }
+		#content p.small {font-size:14px; line-height:20px; padding-bottom:10px; font-weight:600;}
+		#content #intro { max-width:800px; text-align:center; margin:0px auto;}
+		#content #intro h1 {padding-bottom:0px; color:#0058A2;}
+		#content h1 {font-size:28px; line-height:36px; font-weight:600; padding-bottom:25px; text-align:left;}
+		#content #privacy-notice {font-size:14px; line-height:20px; font-weight:400; color:#62687A; padding-top:24px; text-align:left;}
+		#content #privacy-notice a {color:#0066ff; text-decoration:none;}
+		
+		/* progress bar */
+		#progress {height:4px; background:#fff; padding-bottom:24px;}
+		#complete {background:#D10A38; height:4px; width:16%;}
+		
+		/* more info */
+		#moreinfo {font-size:14px; line-height:20px; padding:16px 0px; color:#333333;}
+		#moreinfo .title {font-size:20px; line-height:34px; color:#333333; font-weight:600; padding-bottom:8px;}
+		#moreinfo .title a {color:#0058a2; font-size:28px; line-height:34px; text-decoration:none; font-weight:600;}
+		#moreinfo .subtitle {font-size:20px; line-height:26px; color:#333333; font-weight:600; padding-bottom:16px;}
+		
+		/* signup */
+		#signup .form-field {text-align:left; position:relative; margin-bottom:16px; width:100%; display:block;}
+		#signup input[type=text] {display:inline-block; background-color:#fff; height:50px; width:100%; padding:13px 10px 0px 20px; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-size:16px; line-height:18px; color:#62687a; font-weight:300; border:0; outline:0; border:solid 1px #e8e8e8; box-sizing:border-box; border-radius:4px;}
+		#signup select {display:inline-block; background-color:#fff; height:50px; width:100%; padding:13px 10px 0px 20px; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-size:16px; line-height:18px; color:#62687a; font-weight:300; border:0; outline:0; border:solid 1px #e8e8e8; box-sizing:border-box; border-radius:4px; background-image:url('https://storage.pardot.com/796483/1620991735zCnMT1V7/select_arrow_black.png'); background-size:30px 11px; background-position:right center; background-repeat:no-repeat; -webkit-appearance:none; }
+		#signup select option {margin:0; padding:0;}
+		#signup input[type=submit] {background-color:#0058A2; border-radius:4px; color:#fff; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-size:16px; line-height:16px; font-weight:600; height:50px; border:0; text-decoration:none; display:block; width:100%; -webkit-appearance:none; margin-top:25px; }
+		#signup input[type=submit]:hover {cursor:pointer; opacity:0.9;}
+		#signup input.error {color:#333333; border-color:#e31313;}
+		#signup label.error, #contact-form .error, #contact-form .errors {position:relative; display:block; color:#e31313;font-size:12px; line-height:14px; padding:5px 10px 15px 20px;}
+		#signup p.error input {border-bottom:solid 4px #ff0000;}
+		#signup .form-field {display:block; overflow:hidden; padding:0 5px 0 0; margin-bottom:15px; }
+		#signup .form-field.error {margin-bottom:0px;}
+		#signup .errors, #signup .error {color:#e31313}
+		#signup .form-field.hidden {display:none;}
+		#signup select.error {border-color:#e31313}
+		.pd-text label, .pd-select label, .pd-textarea label {position:absolute; left:10px; top:8px; color:#666666; font-size:16px; display:inline-block; padding:4px 10px; -webkit-transition: all 0.3s; transition: all 0.3s; box-sizing:border-box;}
+		label.active {top:-6px; color:#555; font-size:12px; padding-bottom:0px; margin-bottom:0px; -webkit-transition: all 0.3s; transition: all 0.3s; color:#aaaaaa; box-sizing:border-box;}
+
+		/* footer */
+		#footer {border-top:solid 4px #1a93cc; background-color:#f8f7f5; text-align:center;}
+		#footer #terms {font-size:14px; line-height:20px; padding:30px 0px 20px 0px; color:#666666;}
+		#footer #terms a {text-decoration:underline; color:#666666;}
+		#footer #links {font-size:14px; line-height:24px; padding:30px 0px;}
+		#footer #links a {padding:0px 10px; text-decoration:none; color:#666666; border-right: 1px solid #666666;}
+		#footer #links a.last {border-right:none;}
+		#footer #links a:hover {color:#333333;}
+		#footer #social {padding-bottom:30px;}
+		#footer #social img {padding-left:10px;}
+		#footer #copyright {font-size:14px; line-height:20px; padding-bottom:30px; color:#666666;}
+		 
+		 /* Tablet*/
+		@media only screen and (max-width:1023px) 
+		{
+		/* title */
+		#title .wrapper {padding:24px 24px 8px 24px; text-align:left; max-width:480px; font-size:14px; line-height:20px; color:#333333;}
+		#title h1 { font-size:22px; line-height:28px;}
+		#title ul {list-style:none; margin:0; padding:24px 0 0 0;} 
+		#title li {list-style-type:none; background:url('https://storage.pardot.com/796483/1652268078EZUKjjdg/check.png') no-repeat left 2px; background-size:18px 18px; padding:0px 0px 16px 24px;}
+		}
+		
+		/* Mobile*/
+		@media only screen and (max-width:599px) 
+		{
+		/* General */
+		.left {width:100%;}
+		.right  {width:100%;}
+		.hide {display:none;}
+		.mobile-only {display:block;}
+		.mobile-only-inline {display:inline-block;}
+		.desktop-only {display:none;}
+		.pad {padding:0px 20px 0px 20px;}
+		.block {display:block;}
+		
+		/* Main layout */
+		body .wrapper {margin:0px auto; max-width:1028px; padding:0 16px;}
+		
+		/* Header */
+		#header #phone #desktop {display:none;}
+		#header #phone #mobile {display:block; padding-top:8px;}
+		
+		/* title */
+		#title .wrapper {padding:24px 16px 8px 16px;}
+		
+		/* Content */
+		#content .wrapper {padding:0px 16px 48px 16px; }
+		#content h1 {font-size:22px; line-height:28px; padding:0px 0px 20px 20px;}
+		#content #intro {padding:10px 20px 0px 20px;}
+		#content #intro h1 {padding:0px 0px 0px 0px;}
+		
+		/* more info */
+		#moreinfo {margin:0px 20px 0px 20px;}
+		#moreinfo .title {font-size:18px; line-height:26px;}
+		#moreinfo .title a {font-size:26px;}
+		#moreinfo .subtitle {font-size:18px; line-height:26px; color:#333333; font-weight:600;}
+		
+		/* footer */
+		#footer #links a {display:block; border-right:none;}
+		}
+
+	</style>
+<script type="text/javascript" src="https://join.checkatrade.com/js/piUtils.js?ver=2021-09-20"></script><script type="text/javascript">
+piAId = '797483';
+piCId = '86162';
+piHostname = 'pi.pardot.com';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script></head>
+<body>
+   <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP3QRF"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+    <section id="header">
+        <div class="wrapper">
+			<a href="https://www.checkatrade.com/" target="_blank"><img src="https://storage.pardot.com/796483/1616685291ekBFDFvW/logo.png" alt="Checkatrade" id="logo" /></a>
+			<div id="phone">
+				<div id="desktop">
+					Call us now on <a href="tel:02394212631">02394 212631</a>
+					<div id="hours">Lines open 9am to 7pm Mon-Fri, 9am to 2:30pm Sat</div>
+					<div id="phone_number" pardot-region="phone_number" pardot-region-type="simple"></div>
+				</div>
+				<div id="mobile">
+					<a href="tel:02394212631">
+						<img id="call" src="https://storage.pardot.com/796483/1646237416Jjaa5BBP/call_us.png" width="116" height="40" style="display:block;" border="0" alt="" />	
+					</a>
+				</div>
+			</div>
+			<div class="clear"></div>
+        </div>
+    </section>
+
+	<section id="title">
+		<div class="wrapper">
+			<h1>Your business details</h1>
+			Thanks for your interest in Checkatrade. Please tell us a bit more about your business so that we can: 
+			<ul>
+				<li>Give you an accurate quote for the <span class="dynamic_category"></span> category</li>
+				<li>Show you how many leads you could be getting</li>
+			</ul>  
+		</div>
+	</section>
+	<div id="progress"><div id="complete"></div></div>
+	
+    <section id="content">
+		<div class="wrapper">
+			<div id="signup">
+				<form accept-charset="UTF-8" method="post" action="https://join.checkatrade.com/step1" class="form" id="pardot-form">
+
+<style type="text/css">
+form.form p label { color: #000000; }
+</style>
+
+
+
+
+
+	
+		
+		
+		
+			<div class="form-field  company pd-text required    ">
+				
+				<input type="text" name="796483_136712pi_796483_136712" id="796483_136712pi_796483_136712" value="" class="text" size="30" maxlength="255" onchange="" onfocus="" />
+				
+					
+				<label for="796483_136712pi_796483_136712">Your business name</label>
+				
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136712pi_796483_136712" style="display:none"></div>
+			
+		
+			<div class="form-field  email pd-text required    ">
+				
+				<input type="text" name="796483_136709pi_796483_136709" id="796483_136709pi_796483_136709" value="" class="text" size="30" maxlength="255" onchange="" onfocus="" />
+				
+					
+				<label for="796483_136709pi_796483_136709">Your business email</label>
+				
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136709pi_796483_136709" style="display:none"></div>
+			
+		
+			<div class="form-field  Mobile pd-text required    ">
+				
+				<input type="text" name="796483_136715pi_796483_136715" id="796483_136715pi_796483_136715" value="" class="text" size="30" maxlength="65535" onchange="" onfocus="" />
+				
+					
+				<label for="796483_136715pi_796483_136715">Your business phone</label>
+				
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136715pi_796483_136715" style="display:none"></div>
+			
+		
+			<div class="form-field  zip pd-text required    ">
+				
+				<input type="text" name="796483_155815pi_796483_155815" id="796483_155815pi_796483_155815" value="" class="text" size="30" maxlength="32" onchange="" onfocus="" />
+				
+					
+				<label for="796483_155815pi_796483_155815">Your business postcode*</label>
+				
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_155815pi_796483_155815" style="display:none"></div>
+			
+		
+			<div class="form-field  department pd-select required    ">
+				
+				<select name="796483_136718pi_796483_136718" id="796483_136718pi_796483_136718" class="select" onchange=""><option value="" selected="selected"></option>
+<option value="917939">Limited Company</option>
+<option value="917942">Self-employed</option>
+<option value="917945">Looking to start own business</option>
+<option value="917948">None of the above</option>
+</select>
+				
+					
+				<label for="796483_136718pi_796483_136718">Your business type</label>
+				
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136718pi_796483_136718" style="display:none"></div>
+			
+		
+			<div class="form-field  employees pd-select required    ">
+				
+				<select name="796483_155566pi_796483_155566" id="796483_155566pi_796483_155566" class="select" onchange=""><option value="" selected="selected"></option>
+<option value="1109368">1</option>
+<option value="1109371">2 - 5</option>
+<option value="1109374">6 - 9</option>
+<option value="1109377">10+</option>
+</select>
+				
+					
+				<label for="796483_155566pi_796483_155566">Number of Employees*</label>
+				
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_155566pi_796483_155566" style="display:none"></div>
+			
+		
+			<div class="form-field  Category pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136721pi_796483_136721" id="796483_136721pi_796483_136721" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136721pi_796483_136721" style="display:none"></div>
+			
+		
+			<div class="form-field  utm_campaign pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136727pi_796483_136727" id="796483_136727pi_796483_136727" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136727pi_796483_136727" style="display:none"></div>
+			
+		
+			<div class="form-field  utm_content pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136730pi_796483_136730" id="796483_136730pi_796483_136730" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136730pi_796483_136730" style="display:none"></div>
+			
+		
+			<div class="form-field  utm_medium pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136733pi_796483_136733" id="796483_136733pi_796483_136733" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136733pi_796483_136733" style="display:none"></div>
+			
+		
+			<div class="form-field  utm_source pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136736pi_796483_136736" id="796483_136736pi_796483_136736" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136736pi_796483_136736" style="display:none"></div>
+			
+		
+			<div class="form-field  utm_term pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136739pi_796483_136739" id="796483_136739pi_796483_136739" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136739pi_796483_136739" style="display:none"></div>
+			
+		
+			<div class="form-field  GCLID pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136742pi_796483_136742" id="796483_136742pi_796483_136742" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136742pi_796483_136742" style="display:none"></div>
+			
+		
+			<div class="form-field  clientId pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136745pi_796483_136745" id="796483_136745pi_796483_136745" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136745pi_796483_136745" style="display:none"></div>
+			
+		
+			<div class="form-field  Custom_1stCall pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136748pi_796483_136748" id="796483_136748pi_796483_136748" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136748pi_796483_136748" style="display:none"></div>
+			
+		
+			<div class="form-field get-url Conversion_page pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136751pi_796483_136751" id="796483_136751pi_796483_136751" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136751pi_796483_136751" style="display:none"></div>
+			
+		
+			<div class="form-field get-url First_Conversion_Page_URL pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136754pi_796483_136754" id="796483_136754pi_796483_136754" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136754pi_796483_136754" style="display:none"></div>
+			
+		
+			<div class="form-field  Self_Serve_Progress pd-hidden  hidden   ">
+				
+				<input type="hidden" name="796483_136757pi_796483_136757" id="796483_136757pi_796483_136757" value="" />
+				
+					
+				
+	
+				
+			</div>
+		    <div id="error_for_796483_136757pi_796483_136757" style="display:none"></div>
+			
+		
+		
+		
+	<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+		<label for="pi_extra_field">Comments</label>
+		<input type="text" name="pi_extra_field" id="pi_extra_field"/>
+	</p>
+		
+		
+		<!-- forces IE5-8 to correctly submit UTF8 content  -->
+		<input name="_utf8" type="hidden" value="&#9731;" />
+		
+		<p class="submit">
+			<input type="submit" accesskey="s" value="Show prices" />
+		</p>
+	<p><script type="text/javascript">document.querySelector(".get-url input").value = window.location.href;</script><script type="text/javascript">
+    	$("#pardot-form").validate({
+    		rules: {
+    		"796483_136709pi_796483_136709": {required: true, email: true},
+            "796483_136712pi_796483_136712": "required",
+			"796483_136715pi_796483_136715": {required: true, minlength: 10, maxlength: 14, digits: true},
+              "796483_136718pi_796483_136718": "required"
+    	},
+    	messages: {
+          "796483_136709pi_796483_136709": "This field is required",
+          "796483_136712pi_796483_136712": "This field is required",
+          "796483_136715pi_796483_136715": "Please enter a valid number (no spaces)",
+    	  "796483_136718pi_796483_136718": "Please select an option"
+    	},
+		highlight: function(element) {
+        	$(element).addClass("error");
+			$(element).parent('div').addClass("error");
+		},
+		unhighlight: function(element) {
+			$(element).removeClass("error");
+			$(element).parent('div').removeClass("error");
+		},
+		errorPlacement: function(error, element) {
+			error.insertAfter(element.parent());
+      	},
+    	submitHandler: function(form) {
+    		$("div.Custom_1stCall input").val(moment().add(15, 'minutes').tz("Europe/London").utc().format());	
+            form.submit();
+    	}
+    	});
+    </script><script>
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        let regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    let utmSourceMc = getParameterByName('utm_source');
+    let mediumMc = getParameterByName('utm_medium');
+    let campaignMc = getParameterByName('utm_campaign');
+    let contentMc = getParameterByName('utm_content');
+    let termMc = getParameterByName('utm_term');
+    let gclidMc = getParameterByName('gclid');
+    
+    console.log('gclid set to :' + gclidMc);
+    
+    
+    let clientId;
+    
+    if(mediumMc.length == 0){ mediumMc = "Web Form B"};
+    document.querySelector(".utm_source input").value = utmSourceMc;
+    document.querySelector(".utm_campaign input").value = campaignMc;
+    document.querySelector(".utm_content input").value = contentMc;
+    document.querySelector(".utm_term input").value = termMc;
+    
+    if(document.querySelector(".gclid input")){
+    
+        console.log('Setting Lower case');
+        document.querySelector(".gclid input").value = gclidMc;
+    }
+    
+    if(document.querySelector(".GCLID input")){
+        console.log('Setting Upper case');
+        document.querySelector(".GCLID input").value = gclidMc;
+    }
+    
+    
+    </script></p>
+
+	
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+	var anchors = document.getElementsByTagName("a");
+	for (var i=0; i<anchors.length; i++) {
+		var anchor = anchors[i];
+		if(anchor.getAttribute("href")&&!anchor.getAttribute("target")) {
+			anchor.target = "_top";
+		}
+	}
+		
+//]]>
+</script>
+<input type="hidden" name="hiddenDependentFields" id="hiddenDependentFields" value="" /></form><script type="text/javascript">(function(){ pardot.$(document).ready(function(){ (function() {
+	var $ = window.pardot.$;
+	window.pardot.FormDependencyMap = [];
+
+	$('.form-field-primary input, .form-field-primary select').each(function(index, input) {
+		$(input).on('change', window.piAjax.checkForDependentField);
+		window.piAjax.checkForDependentField.call(input);
+	});
+})(); });})();</script>
+			</div>
+			<div id="privacy-notice">All fields are mandatory. We will never misuse your data or spam you. <a href="https://www.checkatrade.com/About/Privacy.aspx" target="_blank">Read our Privacy&nbsp;Notice</a></div>
+		</div>
+	</section>
+	
+    <section id="footer">
+		<div class="wrapper">
+			<div id="links">
+				<nav>
+					<a href="https://www.checkatrade.com/Consumer/" target="_blank">Why Checkatrade?</a>
+					<a href="https://www.checkatrade.com/Consumer/CheckatradeStandard.aspx" target="_blank">The Checkatrade standard</a>
+					<a href="https://www.checkatrade.com/Consumer/Complaints.aspx/" target="_blank">Complaints about a member</a>
+					<a href="https://www.checkatrade.com/Consumer/FAQ.aspx" target="_blank">FAQ</a>
+					<a href="https://www.checkatrade.com/Consumer/SecureContacts/" target="_blank">Secure contacts</a>
+					<a href="https://careers.checkatrade.com/vacancies/vacancy-search-results.aspx?ictd[master]=vid~dad069a8-bb25-43e3-b0ff-d0deb7153d5d&ictd[il3393]=rlt~1601572185~land~2_25722_direct_5367ee7ef51acb5ab1bbceb6789a6737" target="_blank">Careers</a>
+					<a href="https://www.checkatrade.com/partnerships/" target="_blank">Partners</a>
+					<a href="https://www.checkatrade.com/About/Legal.aspx" target="_blank">Terms of use</a>
+					<a href="https://www.checkatrade.com/About/Privacy.aspx" target="_blank">Privacy notice</a>
+					<a href="https://www.checkatrade.com/sitemap" target="_blank">Sitemap</a>
+					<a href="https://www.checkatrade.com/Contact/" target="_blank">Contact us</a>
+					<a href="https://www.checkatrade.com/Downloads/GenderPay.pdf" target="_blank">Gender pay report 2017</a>
+					<a href="https://www.checkatrade.com/Downloads/gender-pay-2018.pdf" target="_blank">Gender pay report 2018</a>
+					<a class="last" href="https://www.checkatrade.com/Downloads/gender-pay-2019.pdf" target="_blank">Gender pay report 2019</a>
+				</nav>
+			</div>
+			
+			<div id="social">
+				<a href="https://twitter.com/Checkatrade" target="_blank"><img src="https://storage.pardot.com/796483/1601576195GZY1Ih2p/tw.gif" width="36" alt="tw" /></a>
+				<a href="https://www.facebook.com/VettedLtd" target="_blank"><img src="https://storage.pardot.com/796483/1601576252sm7nzkJI/fb.gif" width="36" alt="fb" /></a>
+				<a href="https://www.instagram.com/checkatrade/" target="_blank"><img src="https://storage.pardot.com/796483/16015761958vkWqpvz/ig.gif" width="36" alt="ig" /></a>
+				<a href="https://www.youtube.com/user/checkatrade" target="_blank"><img src="https://storage.pardot.com/796483/16015761958P6G8PdU/yt.gif" width="36" alt="yt" /></a>
+				<a href="https://www.linkedin.com/company/checkatrade/" target="_blank"><img src="https://storage.pardot.com/796483/1601576196KAuGge2D/in.gif" width="36" alt="in" /></a>
+			</div>
+
+			<div id="copyright">&copy; Checkatrade.com all rights reserved</div>
+		</div>
+    </section>
+	
+	<script>
+		$(document).ready(function() {
+			$('input[type=text], select, textarea').addClass('floatLabel');
+			(function($){
+				function floatLabel(inputType){
+				$(inputType).each(function(){
+					var $this = $(this);
+					$this.focus(function(){
+						$this.next().addClass("active");
+					});
+					$this.blur(function(){
+						if($this.val() === ''){
+							$this.next().removeClass();
+						}
+					});
+					if($this.val() != '' ){
+						$this.closest('.form-field').find('label').addClass('active');
+					}
+				});
+			}
+			floatLabel(".floatLabel");
+			})(jQuery);
+		
+			function getParameterByName(name) {
+				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+				return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+			var category = getParameterByName('cat');
+			if(category.length > 0){
+				$(".Category input").val(category)
+			};
+			$(".Self_Serve_Progress input").val("Choose your membership")
+			
+			// //category specific content
+			// var categoryID = $(".Category input").val();
+			// if(categoryID > 0 ) {
+			// 	$.get('https://email-assets.co.uk/checkatrade/category_data.xml', function(d){
+			// 		var category = $(d).find('category[id="' + categoryID + '"]');
+			// 		var name = category.attr('name');
+			// 		if(name) {
+			// 			$(".dynamic_category").text(category.attr('name')); 
+			// 		}
+			// 		else
+			// 		{
+			// 			window.location.href = "https://join.checkatrade.com/sign-up";
+			// 		}
+			// 	});
+			// }
+			// else {
+			// 	window.location.href = "https://join.checkatrade.com/sign-up";
+			// }
+			
+			//insert phone number 
+		    if($('#phone_number').text() != '' ){
+			var link_phonenumber = $('#phone_number').text().replace(/ /,'')
+			var display_phonenumber = $('#phone_number').text().replace(/ /,'\u00a0')
+			$('.phone_link').attr('href', 'tel:' + link_phonenumber);
+			$('.phone_link').not(".image").text(display_phonenumber);
+		}
+		});
+	</script>
+
+	<script src="https://pay.gocardless.com/billing/static/dropin/v2/initialise.js"></script>
+	<script type="text/javascript">
+		var xhr = new XMLHttpRequest();  
+	    xhr.open("POST", "https://synccloud.exelement.io/api/webhook/mQHegNIC");  
+	    xhr.send(); 
+	    xhr.onreadystatechange = function() { 
+	      if (xhr.readyState == 4)
+		  		if (xhr.status == 200) {
+		    		var json_data = JSON.parse(xhr.responseText);
+		    		var id = json_data.id;
+
+		    		if (id !== undefined && id !== '') {
+		    			const handler = GoCardlessDropin.create({
+						    billingRequestFlowID: id,
+						    environment: "sandbox", // either live or sandbox
+						    onSuccess: (billingRequest, billingRequestFlow) => {},
+						    onExit: (error, metadata) => {},
+						});
+						handler.open();
+		    		}
+			}
+	    };
+	</script>
+
+</body>
+</html>
