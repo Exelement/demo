@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+
+			let searchParams = new URLSearchParams(window.location.search);
+			let leadId = searchParams.get('leadId');
+			let emailId = searchParams.get('emailId');
+			
+			let payload = {
+			    "emailId":emailId,
+			    "leadId":leadId
+			};
+
+			$( document ).ready(function() {
+				$.ajax({
+				  type: "POST",
+				  url: "https://synccloud.exelement.io/api/webhook/u3mDfoE9",
+				  data: JSON.stringify(payload),
+				  success: function(data){
+				  	$('#content').html(data.content);
+				  },
+				  contentType: "application/json; charset=utf-8",
+				  dataType: "json"
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="content"></div>
+	</body>
+</html>
+
