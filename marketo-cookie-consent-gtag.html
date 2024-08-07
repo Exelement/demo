@@ -1,0 +1,20 @@
+<script type="text/javascript">
+function OptanonWrapper() {
+    if (OnetrustActiveGroups.includes("C0004")) {
+        console.log('Targeting cookies accepted');
+
+        if( typeof MktoForms2 != "undefined" ) {
+            MktoForms2.whenReady(function(form) {
+                console.log(form.getId());
+                var thisForm = MktoForms2.getForm(form.getId());
+                thisForm.addHiddenFields({cookieConsent: true});
+            });
+        }
+
+    }
+}
+
+window.addEventListener("OneTrustGroupsUpdated", event => {
+    OptanonWrapper();
+});
+</script>

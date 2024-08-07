@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketo form cookie consent demo</title>
+
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="6d2eb89a-9002-4513-8ba7-09e3a49e524d" ></script>
+
+</head>
+
+<body>
+    <script src="//249-IYZ-794.mktoweb.com/js/forms2/js/forms2.min.js"></script>
+    <form id="mktoForm_1072"></form>
+    <script>
+    MktoForms2.loadForm("//249-IYZ-794.mktoweb.com", "249-IYZ-794", 1072);
+    </script>
+
+    <script type="text/javascript">
+    function OptanonWrapper() {
+        if (OnetrustActiveGroups.includes("C0004")) {
+            console.log('Targeting cookies accepted');
+
+            if( typeof MktoForms2 != "undefined" ) {
+                MktoForms2.whenReady(function(form) {
+                    console.log(form.getId());
+                    var thisForm = MktoForms2.getForm(form.getId());
+                    thisForm.addHiddenFields({cookieConsent: true});
+                });
+            }
+
+        }
+    }
+
+    window.addEventListener("OneTrustGroupsUpdated", event => {
+        OptanonWrapper();
+    });
+    </script>
+    
+</body>
+
+</html>
